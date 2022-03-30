@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Contact View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contacts_UserDefaults_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewContactViewController" customModule="Contacts_UserDefaults_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="49.553571428571423"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts-->
         <scene sceneID="u6z-MI-OU3">
             <objects>
                 <tableViewController id="oOU-tj-LES" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="oOU-tj-LES" id="N1Y-8s-6yc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1Ni-le-M7x">
+                    <navigationItem key="navigationItem" title="Contacts" id="1Ni-le-M7x">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="12l-TM-lhC">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="IDM-GO-1iJ"/>

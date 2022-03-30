@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewContactViewController.swift
 //  Contacts(UserDefaults)
 //
 //  Created by Dmitry Logachev on 29.03.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
