@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewContactViewControllerDelegate {
+    func saveContact(_ contact: Contact)
+}
+
 class ContactsTableViewController: UITableViewController {
     
     private var contacts: [Contact] = []
@@ -69,14 +73,18 @@ class ContactsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let newContactVC = segue.destination as! NewContactViewController
+        newContactVC.delegate = self
     }
-    */
+}
 
+extension ContactsTableViewController: NewContactViewControllerDelegate {
+    func saveContact(_ contact: Contact) {
+        contacts.append(contact)
+        tableView.reloadData()
+    }
 }

@@ -8,6 +8,8 @@
 import UIKit
 
 class NewContactViewController: UIViewController {
+    
+    var delegate: NewContactViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
