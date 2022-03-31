@@ -17,15 +17,26 @@ class NewContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        nameTextField.addTarget(
+            self,
+            action: #selector(nameTextFieldDidChange),
+            for: .editingChanged
+        )
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true)
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        //saveAndExit()
     }
     
+    @objc private func nameTextFieldDidChange() {
+        guard let name = nameTextField.text else { return }
+        doneButton.isEnabled = !name.isEmpty
+    }
 
 }
 
