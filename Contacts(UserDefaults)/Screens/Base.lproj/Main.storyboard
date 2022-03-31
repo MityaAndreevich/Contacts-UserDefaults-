@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dGN-Pu-3Ad">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" id="dGN-Pu-3Ad">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dGN-Pu-3Ad" id="q9Y-QU-h0c">
@@ -60,7 +60,7 @@
                                                 <action selector="cancelButtonPressed:" destination="wOk-AM-RAB" id="LET-84-l7d"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="FgG-T5-T6V">
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="FgG-T5-T6V">
                                             <connections>
                                                 <action selector="doneButtonPressed:" destination="wOk-AM-RAB" id="ycs-dQ-1hF"/>
                                             </connections>

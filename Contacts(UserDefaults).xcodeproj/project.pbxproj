@@ -72,9 +72,8 @@
 				5F35E56A27F329E500A44C71 /* SceneDelegate.swift */,
 				5F03534527F4B2920035FA5F /* Models */,
 				5F35E57C27F377F000A44C71 /* ViewControllers */,
-				5F35E56E27F329E500A44C71 /* Main.storyboard */,
+				5FA5E50D27F5E94300ADBB57 /* Screens */,
 				5F35E57127F329E700A44C71 /* Assets.xcassets */,
-				5F35E57327F329E700A44C71 /* LaunchScreen.storyboard */,
 				5F35E57627F329E700A44C71 /* Info.plist */,
 			);
 			path = "Contacts(UserDefaults)";
@@ -87,6 +86,15 @@
 				5F35E56C27F329E500A44C71 /* NewContactViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5FA5E50D27F5E94300ADBB57 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5F35E56E27F329E500A44C71 /* Main.storyboard */,
+				5F35E57327F329E700A44C71 /* LaunchScreen.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

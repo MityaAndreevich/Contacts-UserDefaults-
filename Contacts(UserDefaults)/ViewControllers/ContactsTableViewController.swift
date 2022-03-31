@@ -14,24 +14,24 @@ protocol NewContactViewControllerDelegate {
 class ContactsTableViewController: UITableViewController {
     
     private var contacts: [String] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contacts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
         let contact = contacts[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = contact
         cell.contentConfiguration = content
-
+        
         return cell
     }
     
