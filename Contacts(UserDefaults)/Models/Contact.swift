@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contact: Codable {
+/*struct Contact: Codable {
     let name: String
     let surname: String
     
@@ -15,3 +15,4 @@ struct Contact: Codable {
         "\(name) \(surname)"
     }
 }
+ /**/*/

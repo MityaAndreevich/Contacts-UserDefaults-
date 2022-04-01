@@ -14,7 +14,7 @@ class NewContactViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     
     var delegate: NewContactViewControllerDelegate!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +25,11 @@ class NewContactViewController: UIViewController {
         )
     }
     
-    @IBAction func cancelButtonPressed(_ sender: Any) {
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
-    @IBAction func doneButtonPressed(_ sender: Any) {
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         saveAndExit()
     }
     
@@ -41,9 +41,12 @@ class NewContactViewController: UIViewController {
     private func saveAndExit() {
         guard let name = nameTextField.text else { return }
         guard let surname = surnameTextField.text else { return }
-        delegate.saveContact("\(name) \(surname)")
+        
+        let fullName = "\(name) \(surname)"
+        UserDefaults.standard.set(fullName, forKey: "ContactName")
+        
+        delegate.saveContact("\(fullName)")
         dismiss(animated: true)
     }
-
 }
 
