@@ -17,10 +17,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        if let contactName = UserDefaults.standard.string(forKey: "ContactName") {
-            contacts.append(contactName)
-        }
+        contacts = StorageManager.shared.fetchContacts()
     }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,6 +43,7 @@ class ContactsTableViewController: UITableViewController {
     //MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            StorageManager.shared.deleteContact(at: indexPath.row)
             contacts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }

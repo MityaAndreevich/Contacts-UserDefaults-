@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCK-8K-wHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="-28"/>
+            <point key="canvasLocation" x="-433" y="-28"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="6Og-kS-IhM">
@@ -108,8 +108,8 @@
         <scene sceneID="7N1-LW-Wze">
             <objects>
                 <navigationController id="WMR-E2-n0J" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7mK-PH-OHu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7mK-PH-OHu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
