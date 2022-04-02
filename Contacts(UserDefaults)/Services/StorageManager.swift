@@ -5,7 +5,7 @@
 //  Created by Dmitry Logachev on 01.04.2022.
 //
 
-import Foundation
+/*import Foundation
 
 class StorageManager {
     static let shared  = StorageManager()
@@ -34,3 +34,4 @@ class StorageManager {
         userDefaults.set(contacts, forKey: key)
     }
 }
+*/
