@@ -8,12 +8,12 @@
 import UIKit
 
 protocol NewContactViewControllerDelegate {
-    func saveContact(_ contact: String)
+    func saveContact(_ contact: Contact)
 }
 
 class ContactsTableViewController: UITableViewController {
     
-    private var contacts: [String] = []
+    private var contacts: [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
-        let contact = contacts[indexPath.row]
+        let contact = contacts[indexPath.row].fullname
         var content = cell.defaultContentConfiguration()
         content.text = contact
         cell.contentConfiguration = content
@@ -51,7 +51,7 @@ class ContactsTableViewController: UITableViewController {
 }
 
 extension ContactsTableViewController: NewContactViewControllerDelegate {
-    func saveContact(_ contact: String) {
+    func saveContact(_ contact: Contact) {
         contacts.append(contact)
         tableView.reloadData()
     }

@@ -42,9 +42,9 @@ class NewContactViewController: UIViewController {
         guard let name = nameTextField.text else { return }
         guard let surname = surnameTextField.text else { return }
         
-        let fullName = "\(name) \(surname)"
-        StorageManager.shared.save(contact: fullName)
-        delegate.saveContact(fullName)
+        let contact = Contact(name: name, surname: surname)
+        StorageManager.shared.save(contact: contact)
+        delegate.saveContact(contact)
         dismiss(animated: true)
     }
 }
