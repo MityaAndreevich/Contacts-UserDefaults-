@@ -17,9 +17,6 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //if let contactName = UserDefaults.standard.string(forKey: "ContactName") {
-         //   contacts.append(contactName)
-       // }
         contacts = StorageManager.shared.fetchContacts()
     }
     // MARK: - Navigation
@@ -47,7 +44,6 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             StorageManager.shared.deleteContact(at: indexPath.row)
-           // UserDefaults.standard.removeObject(forKey: "ContactName")
             contacts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
