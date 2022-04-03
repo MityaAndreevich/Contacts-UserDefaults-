@@ -5,7 +5,7 @@
 //  Created by Dmitry Logachev on 01.04.2022.
 //
 
-/*import Foundation
+import Foundation
 
 class StorageManager {
     static let shared  = StorageManager()
@@ -22,7 +22,7 @@ class StorageManager {
     }
     
     func fetchContacts() -> [String] {
-        if let contacts = UserDefaults.value(forKey: key) as? [String] {
+        if let contacts = userDefaults.value(forKey: key) as? [String] {
             return contacts
         }
         return []
@@ -34,4 +34,4 @@ class StorageManager {
         userDefaults.set(contacts, forKey: key)
     }
 }
-*/
+
